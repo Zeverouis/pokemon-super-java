@@ -2,7 +2,8 @@ public class FirePokemon extends pokemonsuper {
     private int fireHeight;
     private boolean alive;
 
-    public FirePokemon(int fireHeight, boolean alive) {
+    public FirePokemon(int fireHeight, boolean alive, String name, int level, int hp, String food) {
+        super(name, level, hp, food);
         this.fireHeight = fireHeight;
         this.alive = alive;
     }
@@ -33,7 +34,7 @@ public class FirePokemon extends pokemonsuper {
         }
     }
 
-    public void status(boolean alive){
+    public void status(){
         if (getHp() <= 0) {
             setAlive(false);
             System.out.println("Better go see Nurse Joy!");
@@ -46,9 +47,8 @@ public class FirePokemon extends pokemonsuper {
         }
     }
 
-    public void isAliveOrNot(boolean alive){
-        System.out.println(getName() + "Are you alive?" + " " + isAlive());
+    @Override
+    public void food(){
+        System.out.println(super.getName() + " " +  "eats steaks!");
     }
-
-
 }

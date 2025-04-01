@@ -1,9 +1,8 @@
 import java.util.Scanner;
 
-public class pokemonsuper {
+public abstract class pokemonsuper {
     private String name;
     private int level;
-    private int xp;
     private int hp;
     private String food;
 
@@ -17,6 +16,7 @@ public class pokemonsuper {
 
     public pokemonsuper() {
     }
+
 
     public String getName() {
         return name;
@@ -50,16 +50,13 @@ public class pokemonsuper {
         this.food = food;
     }
 
-    public int getXp() {
-        return xp;
+    public void pokemonLevel() {
+        System.out.println("Your pokemon's level is" + " " + getLevel());
     }
 
-    public void setXp(int xp) {
-        this.xp = xp;
-    }
-
-    public void pokemonLevel(int level) {
-        System.out.println("Your pokemon's level is" + getLevel());
+    public void levelUp() {
+        this.level++;
+        System.out.println("Your" + " " + name + " " + "leveled up! New level is:" + level);
     }
 
     public void pokemonName() {
@@ -68,4 +65,6 @@ public class pokemonsuper {
         name = sc.nextLine();
         System.out.println("New name =" + " " + getName());
     }
+
+    public abstract void food();
 }
