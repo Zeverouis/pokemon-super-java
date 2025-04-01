@@ -1,2 +1,2 @@
-public class ElectricPokemon {
+public class ElectricPokemon extends pokemonsuper{
 }

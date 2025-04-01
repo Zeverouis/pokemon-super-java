@@ -15,6 +15,9 @@ public class pokemonsuper {
         this.food = food;
     }
 
+    public pokemonsuper() {
+    }
+
     public String getName() {
         return name;
     }
